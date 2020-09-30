@@ -7,7 +7,7 @@ Vehicle Tracking System Using YOLO
 
 clone the repo<br/>
 `git clone git@https://github.com/PrasannaDangol/VTrack.git`<br/><br/>
-Install libraries<br/>
+Install dependencies<br/>
 `pip install requirements.txt`<br/><br/>
 Execute project in development mode<br/>
 `python manage.py runserver`<br/><br/>
