@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class Map(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User,default='', on_delete=models.CASCADE)
     location = models.CharField(default='', max_length=60)
 
     def __str__(self):
