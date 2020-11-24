@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)# one to one with user and if user is deleted profile picture is also deleted but not vice versa
-    phonenumber = models.IntegerField(default=+977)
+    phonenumber = models.BigIntegerField(default='977-')
     licensenumber = models.CharField(default='', max_length=60)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 

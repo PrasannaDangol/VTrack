@@ -12,3 +12,7 @@ def howitworks(request):
 @login_required
 def map(request):
     return render(request, 'map/map.html')
+
+@login_required
+def missingreport(request):
+    return render(request, 'missingreport/missingreport.html')
