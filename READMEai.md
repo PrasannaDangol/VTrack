@@ -1,7 +1,7 @@
-# Vietnamese ALPR_System
-_An Automatic License Plate Recognition System for Vietnamese Plates_
+# VTrack system
+_An Automatic License Plate Recognition System
 
-This system can detect and recognize 2 types of license plate in Vietnam, rectangle plates and square plates.
+This system can detect and recognize 2 types of license plate, rectangle plates and square plates.
 
 ## Abstract
 - This system can detect and recognize license plates from images, videos and webcams.
@@ -23,8 +23,8 @@ This system can detect and recognize 2 types of license plate in Vietnam, rectan
 - run `test_image.py` for testing on an image.
 
 ## Result
-- ![Demo](https://github.com/longphungtuan94/ALPR_System/blob/master/test_videos/screenshot_1.png)
-- ![Demo2](https://github.com/longphungtuan94/ALPR_System/blob/master/test_videos/screenshot_2.png)
+- ![Demo](https://github.com/PrasannaDangol/VTrack/tree/dev/test_videos/screenshot_1.png)
+- ![Demo2](https://github.com/PrasannaDangol/VTrack/tree/dev/test_videos/screenshot_2.png)
 
 ## Note
 - You should play with these parameters: `minPlateArea`, `maxPlateArea` and `ksize` in `cv2.getStructuringElement` to implement successfully on your own case.
