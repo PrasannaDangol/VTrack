@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Locate</title>
+{% endblock title %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/all.min.css' %}">
+    <link rel = "stylesheet" type="text/css" href="{% static 'home/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Locate</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+{% endblock head %}
+
+{% block content %}
+  <div class="container-fluid" style="padding-top: 10px">
+      <div class="row">
+          <div class="col-md-3">
+                <section class="profile">
+                    <div class="profilepic">
+                        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}"/>
+                    </div>
+                    <div class="profiledata">
+                        <h2 class="account-heading">Username: {{ user.username }}</h2>
+                        <p class="text-secondary">Email: {{ user.email }}</p>
+                        <p class="text-secondary">Phone number: {{ user.profile.phonenumber }}</p>
+                        <p class="text-secondary">License number: {{ user.profile.licensenumber }}</p>
+                    </div>
+                </section>
+          </div>
+          <div class="col-md-9" style="padding-top: 50px; width: auto">
+              <div id='map' style='width: auto; height: 700px;'></div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicHJhc2FubmExNzUwOSIsImEiOiJjazdiamt4cm8xZmp2M2VwamM4YW13aHZqIn0.Fyij8bD6WpqSnHAFL69yKA';
+                var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [85.3240, 27.7172],
+                        zoom: 12,
+                        attributionControl: false
+                });
+                map.addControl(new mapboxgl.NavigationControl());
+                </script>
+          </div>
+      </div>
+  </div>
+
+{% endblock content %}
