@@ -1,10 +1,23 @@
 import cv2
 import time
 import threading
+
 from class_CNN import NeuralNetwork
 from class_PlateDetection import PlateDetector
 from utils.average_plate import *
 from utils.find_best_quality_images import get_best_images
+
+import mysql.connector
+from django.db.models.functions import datetime
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="vtrack"
+)
+
+mycursor = mydb.cursor()
 
 ########### INIT ###########
 # Initialize the plate detector
@@ -54,6 +67,14 @@ def recognized_plate(list_char_on_plate, size):
 
     print("recognized plate: " + final_plate)
     print("threading time: " + str(time.time() - t0))
+
+    sql = "INSERT INTO map_vehicle (licensenumber, location, Time) VALUES (%s, %s, %s)"
+    val = (final_plate, "Highway 21", datetime.datetime.now())
+    mycursor.execute(sql, val)
+    mydb.commit()
+
+    print(mycursor.rowcount, "record inserted.")
+
 
 cap = cv2.VideoCapture('test_videos/test.MOV') # video path
 
