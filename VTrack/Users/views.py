@@ -50,5 +50,5 @@ def profile(request):
     return render(request, 'Users/profile.html', {'form': form, 'u_form': u_form, 'p_form': p_form})
 
 def app(request):
-    return render(request, 'Users/app.html')
+    return render(request, 'home/home.html')
 

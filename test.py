@@ -13,7 +13,7 @@ from django.db.models.functions import datetime
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="",
+  password="password123",
   database="vtrack"
 )
 

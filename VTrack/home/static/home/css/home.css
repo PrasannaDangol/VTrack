@@ -118,9 +118,9 @@ a.nav-link:hover {
 }
 
 .navbar .form-inline .btn-register{
-    margin-right:10px;
+    margin-right:20px;
     padding:8px 12px;
-    background:rgb(240,248,255);;
+    background:rgb(240,248,255);
     line-height:15px;
     border-radius:4px;
     color:black;
@@ -130,7 +130,7 @@ a.nav-link:hover {
 
 /*homepage*/
 .content{
-margin-top: 80px;
+margin-top: 65px;
 }
 
 .singlesolution{
