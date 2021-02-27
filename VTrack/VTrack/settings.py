@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vtrack',
         'USER': 'root',
-        'PASSWORD': 'password123',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
