@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vtrack',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'password123',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -139,5 +139,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #path to directory to uploaded file
 MEDIA_URL = '/media/'  #public url of media directory
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'app'
+LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'

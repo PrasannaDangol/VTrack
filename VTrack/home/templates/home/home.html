@@ -7,90 +7,141 @@
 
 {% block content %}
 
-    <section class="front-end center">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="home-l-c">
-                    <h2>SIMPLIFIED ENDPOINT MANAGEMENT</h2>
-                    <h2>WITH AUTOMATED SECURITY AND ANTI-THEFT.</h2>
-                    <p>Make sure all endpoints are properly utilized, secured, and not putting data compliance at risk with multi-OS device management.to detail.</p>
-                    <button class="btn_apply">Apply Now</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="home-r-c">
-                    <img src="{% static 'home/home_img.webp' %}" />
-                </div>
+    <section class="hero front-end center">
+        <div class="container-fluid">
+            <div class="container container-landing">
+                <h1 class="primary-title">AI Powered Vehicle Tracking</h1>
+                <p>AI Powered Vehicle Tracking is a revolutionary way to track lost or stolen vehicles. Making
+                    use of Artificial Intelligence, you never have to go through the hassle previously faced.</p>
+                <a href="#btn" class="btn-apply">Apply Now<img src="{% static 'home/ic-arrow.svg' %}" alt="Arrow Icon"></a>
             </div>
         </div>
-    </div>
     </section>
 
-
-    <section class="trusted">
+    <section class="requirements">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                   <h1>TRUSTED.</h1>
-                        <p>Prey is trusted by millions of people, businesses, and institutions around the globe.</p>
-                        <h1>+7,136,934</h1>
-                        <p>Awesome Security Heroes</p>
-                        <h1>+8,852,602</h1>
-                        <p>Cool gadgets safe and sound</p>
-                        <h1>+230</h1>
-                        <p>Countries covered (small islands too)</p>
-                </div>
+            <h2 class="section-title">What We Do!</h2>
+            <div class="split">
+                <article class="requirements__item">
+                    <h3>Identify Vehicle Plate</h3>
+                    <img src="{% static 'home/plate.jpg' %}" alt="">
+                    <p>With the use of Artificial Intelligence Technology, We track the given license number plate using Character Segmentation and Recognition</p>
+                </article>
+                <article class="requirements__item">
+                    <h3>Track Vehicle</h3>
+                    <img src="{% static 'home/locate.jpg' %}" alt="">
+                    <p>Find the closet CCTV where the vehicle was last seen for increasing the possibility of finding the vehicle.</p>
+                </article>
+                <article class="requirements__item">
+                    <h3>Notify User</h3>
+                    <img src="{% static 'home/notify.png' %}" alt="">
+                    <p>Once the vehicle has been located, we notify the end user of the last seen destination of the vehicle.</p>
+                </article>
             </div>
         </div>
     </section>
 
+    <section class="gallery">
+      <h2>How Did We Built It?</h2>
+      <p>The tools that we used to build this project</p>
+      <div class="gallery__foods">
+          <div class="container-images">
+              <img src="{% static 'home/py.png' %}" alt="Dumplings on a wooden table." class="gallery__image">
+              <div class="overlay">
+              <div class="text">Python</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/django.png' %}" alt="Kimbap placed on rectangular plate." class="gallery__image">
+              <div class="overlay">
+              <div class="text">Django</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/mysql.png' %}" alt="Waffles and syrup on a white square plate." class="gallery__image">
+              <div class="overlay">
+              <div class="text">MySQL</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/tf.png' %}" alt="Noodles on a bowl." class="gallery__image">
+              <div class="overlay">
+              <div class="text">Tensorflow</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/js.png' %}" alt="French Fries on a ceramic bowl." class="gallery__image">
+              <div class="overlay">
+              <div class="text">JavaScript</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/html.png' %}" alt="Close-up picture of Pepperoni Pizza." class="gallery__image">
+              <div class="overlay">
+              <div class="text">HTML & CSS</div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-
-<section class="singlesolution">
-    <h1>A SINGLE SOLUTION</h1>
+  <section class="our-webcoderskull padding-lg">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="solution1">
-              <h2>TRACKING AND CONTROL</h2>
-              <p>Control Zones to detect early when a device moves in or out of an area, battery-efficient Aware Tracking to find your device, and a hour-by-hour Location History to see where it has been.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="solution2">
-              <h2>TRACKING AND CONTROL</h2>
-              <p>Control Zones to detect early when a device moves in or out of an area, battery-efficient Aware Tracking to find your device, and a hour-by-hour Location History to see where it has been.</p>
-          </div>
-        </div>
+      <div class="row heading heading-icon">
+          <h2>Our Team</h2>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="solution3">
-              <h2>TRACKING AND CONTROL</h2>
-              <p>Control Zones to detect early when a device moves in or out of an area, battery-efficient Aware Tracking to find your device, and a hour-by-hour Location History to see where it has been.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="solution4">
-              <h2>TRACKING AND CONTROL</h2>
-              <p>Control Zones to detect early when a device moves in or out of an area, battery-efficient Aware Tracking to find your device, and a hour-by-hour Location History to see where it has been.</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="solution5">
-              <h2>TRACKING AND CONTROL</h2>
-              <p>Control Zones to detect early when a device moves in or out of an area, battery-efficient Aware Tracking to find your device, and a hour-by-hour Location History to see where it has been.</p>
-          </div>
-        </div>
-      </div>
+      <ul class="row">
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/prasanna.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.linkedin.com/in/prasanna-dangol-7abaa1178/">Prasanna Dangol</a></h3>
+              <p>Backend Developer</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/shreyanshu.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.linkedin.com/in/skunwar11">Shreyanshu Kunwar</a></h3>
+              <p>AI & Frontend Developer</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/xu.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.linkedin.com/in/sujan-manandhar-582059179/">Sujan Manandhar</a></h3>
+              <p>Frontend Developer</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+         </li>
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/shreejal.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.facebook.com/shreejal04">Shreejal Gupta</a></h3>
+              <p>QA and Research</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+        </li>
+      </ul>
     </div>
-</section>
-
-
-
-
-<section class="whattheysayaboutus">
+  </section>
+<!-- <section class="whattheysayaboutus">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -142,11 +193,11 @@
         </div>
     </div>
 </section>
+ -->
 
 
 
-
-    <section class="sourcecode">
+<!--     <section class="sourcecode">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -160,7 +211,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
