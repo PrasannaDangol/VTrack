@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'Users.apps.UsersConfig',
     'crispy_forms',
-    'map.apps.MapConfig',
+    'map',
     'missingreport.apps.MissingreportConfig',
 ]
 

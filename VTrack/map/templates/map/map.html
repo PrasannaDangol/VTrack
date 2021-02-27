@@ -31,13 +31,20 @@
                         <p class="text-secondary">Email: {{ user.email }}</p>
                         <p class="text-secondary">Phone number: {{ user.profile.phonenumber }}</p>
                         <p class="text-secondary">License number: {{ user.profile.licensenumber }}</p>
+                        {% for i in vehicle_number %}
+                        {% if user.profile.licensenumber == i.licensenumber %}
+                         <p class="text-secondary">License number: {{ i.lat }}</p>
+                        {% endif %}
+                        {% endfor %}
+                        
                     </div>
                 </section>
           </div>
           <div class="col-md-9" style="padding-top: 50px; width: auto">
               <div id='map' style='width: auto; height: 700px;'></div>
                 <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoicHJhc2FubmExNzUwOSIsImEiOiJjazdiamt4cm8xZmp2M2VwamM4YW13aHZqIn0.Fyij8bD6WpqSnHAFL69yKA';
+
+                mapboxgl.accessToken = '{{mapbox}}';
                 var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
@@ -45,6 +52,14 @@
                         zoom: 12,
                         attributionControl: false
                 });
+                {% for i in vehicle_number %}
+                {% if user.profile.licensenumber == i.licensenumber %}
+                 var marker = new mapboxgl.Marker()
+                  .setLngLat([85.3240, 27.7172])
+                  .addTo(map);
+                {% endif %}
+                {% endfor %}
+
                 map.addControl(new mapboxgl.NavigationControl());
                 </script>
           </div>

@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
+from map.models import Vehicle
+
 
 # Create your views here.
 def home(request):
@@ -11,7 +13,14 @@ def howitworks(request):
 
 @login_required
 def map(request):
-    return render(request, 'map/map.html')
+	mapbox_access_token = 'pk.eyJ1IjoicHJhc2FubmExNzUwOSIsImEiOiJjazdiamt4cm8xZmp2M2VwamM4YW13aHZqIn0.Fyij8bD6WpqSnHAFL69yKA'
+	vehicle_number = Vehicle.objects.all()
+	# vehicle_number = vehicle_number[0].licensenumber
+	context = {
+	"mapbox" : mapbox_access_token,
+	"vehicle_number" : vehicle_number
+	}
+	return render(request, 'map/map.html', context)
 
 @login_required
 def missingreport(request):

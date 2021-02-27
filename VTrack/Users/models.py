@@ -10,6 +10,7 @@ class Profile(models.Model):
     phonenumber = models.CharField(max_length=12)
     licensenumber = models.CharField(default='', max_length=60)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    location = models.CharField(default='', max_length=60)
 
 
     def __str__(self):

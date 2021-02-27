@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 import uuid
 import datetime
 from django.utils.timezone import utc
-
 # Create your models here.
 
 
@@ -20,6 +19,8 @@ class Vehicle(models.Model):
     licensenumber = models.CharField(default='', max_length=60)
     location = models.CharField(default='', max_length=60)
     Time = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    lat =  models.CharField(default='', max_length=60)
+    lon =  models.CharField(default='', max_length=60)
 
     def __str__(self):
         return f'{self.licensenumber}'
