@@ -64,7 +64,7 @@
                            </div>
                         </a>
                         <a class="btn" type="button" href="{% url 'profile' %}">{{user.username}}</a>
-                        <a class="btn btn-logout" type="button" href="{% url 'logout' %}">Logout</a>
+                        <a class="btn btn-logout btn-custom-logout" type="button" href="{% url 'logout' %}">Logout</a>
                     {% else %}
                         <a class="btn btn-register" type="button" href="{% url 'register' %}">Register</a>
                         <a class="btn btn-login" type="button" href="{% url 'login' %}">Login</a>
@@ -172,11 +172,7 @@
           <div class="col-md-7 col-lg-8">
 
             <!--Copyright-->
-            <p class="text-center text-md-left">© 2020 Copyright:
-              <a href="https://github.com/PrasannaDangol">
-                <strong> Team CT707</strong>
-              </a>
-            </p>
+            <p class="text-center text-md-left">© 2020 Copyright: <strong> Team CT-755</strong></p>
 
           </div>
           <!-- Grid column -->

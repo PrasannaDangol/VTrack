@@ -30,13 +30,7 @@
                         <h2 class="account-heading">Username: {{ user.username }}</h2>
                         <p class="text-secondary">Email: {{ user.email }}</p>
                         <p class="text-secondary">Phone number: {{ user.profile.phonenumber }}</p>
-                        <p class="text-secondary">License number: {{ user.profile.licensenumber }}</p>
-                        {% for i in vehicle_number %}
-                        {% if user.profile.licensenumber == i.licensenumber %}
-                         <p class="text-secondary">License number: {{ i.lat }}</p>
-                        {% endif %}
-                        {% endfor %}
-                        
+                        <p class="text-secondary">Your License Number: {{ user.profile.licensenumber }}</p>                       
                     </div>
                 </section>
           </div>

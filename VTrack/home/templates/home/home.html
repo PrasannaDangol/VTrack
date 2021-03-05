@@ -24,17 +24,17 @@
             <div class="split">
                 <article class="requirements__item">
                     <h3>Identify Vehicle Plate</h3>
-                    <img src="{% static 'home/plate.jpg' %}" alt="">
+                    <img src="{% static 'home/plate.jpg' %}" alt="license plate detection image">
                     <p>With the use of Artificial Intelligence Technology, We track the given license number plate using Character Segmentation and Recognition</p>
                 </article>
                 <article class="requirements__item">
                     <h3>Track Vehicle</h3>
-                    <img src="{% static 'home/locate.jpg' %}" alt="">
-                    <p>Find the closet CCTV where the vehicle was last seen for increasing the possibility of finding the vehicle.</p>
+                    <img src="{% static 'home/locate.jpg' %}" alt="vehicle tracking image">
+                    <p>Find the closet location where the vehicle was last seen for increasing the possibility of finding the vehicle.</p>
                 </article>
                 <article class="requirements__item">
                     <h3>Notify User</h3>
-                    <img src="{% static 'home/notify.png' %}" alt="">
+                    <img src="{% static 'home/notify.png' %}" alt="user notification image">
                     <p>Once the vehicle has been located, we notify the end user of the last seen destination of the vehicle.</p>
                 </article>
             </div>
@@ -44,41 +44,53 @@
     <section class="gallery">
       <h2>How Did We Built It?</h2>
       <p>The tools that we used to build this project</p>
-      <div class="gallery__foods">
+      <div class="gallery__logos">
           <div class="container-images">
-              <img src="{% static 'home/py.png' %}" alt="Dumplings on a wooden table." class="gallery__image">
+              <img src="{% static 'home/py.png' %}" alt="Python logo" class="gallery__image">
               <div class="overlay">
               <div class="text">Python</div>
               </div>
           </div>
           <div class="container-images">
-              <img src="{% static 'home/django.png' %}" alt="Kimbap placed on rectangular plate." class="gallery__image">
+              <img src="{% static 'home/django.png' %}" alt="Django logo" class="gallery__image">
               <div class="overlay">
               <div class="text">Django</div>
               </div>
           </div>
           <div class="container-images">
-              <img src="{% static 'home/mysql.png' %}" alt="Waffles and syrup on a white square plate." class="gallery__image">
+              <img src="{% static 'home/mysql.png' %}" alt="MySQL logo" class="gallery__image">
               <div class="overlay">
               <div class="text">MySQL</div>
               </div>
           </div>
           <div class="container-images">
-              <img src="{% static 'home/tf.png' %}" alt="Noodles on a bowl." class="gallery__image">
+              <img src="{% static 'home/tf.png' %}" alt="Keras and Tensorflow logo" class="gallery__image">
               <div class="overlay">
-              <div class="text">Tensorflow</div>
+              <div class="text">Keras & Tensorflow</div>
               </div>
           </div>
           <div class="container-images">
-              <img src="{% static 'home/js.png' %}" alt="French Fries on a ceramic bowl." class="gallery__image">
+              <img src="{% static 'home/js.png' %}" alt="JavaScript logo" class="gallery__image">
               <div class="overlay">
               <div class="text">JavaScript</div>
               </div>
           </div>
           <div class="container-images">
-              <img src="{% static 'home/html.png' %}" alt="Close-up picture of Pepperoni Pizza." class="gallery__image">
+              <img src="{% static 'home/html.png' %}" alt="HTML & CSS Logo" class="gallery__image">
               <div class="overlay">
               <div class="text">HTML & CSS</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/mapbox.jpg' %}" alt="Mapbox logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Mapbox</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/mailgun.png' %}" alt="Mailgun logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Mailgun</div>
               </div>
           </div>
       </div>
@@ -141,78 +153,5 @@
       </ul>
     </div>
   </section>
-<!-- <section class="whattheysayaboutus">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>WHAT THEY SAY ABOUT US</h1>
-                <a href="#" class="btn_knowmore">
-                    <button type="button" class="btn btn-outline-dark">Read More Stories</button>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <h2>Tracked lost vehicle after 2 weeks</h2>
-                        <a href="#">
-                            <button class="btnreadstories" data-toggle="collapse" data-target=".navbar-collapse">Read story
-                        </button>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                      <h2>Found my bike thrown in dumpsite</h2>
-                        <a href="#">
-                            <button class="btnreadstories" data-toggle="collapse" data-target=".navbar-collapse">Read story
-                        </button>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                      <h2>Traced the robber and caught him</h2>
-                        <a href="#">
-                            <button class="btnreadstories" data-toggle="collapse" data-target=".navbar-collapse">Read story
-                        </button>
-                        </a>
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
- -->
-
-
-
-<!--     <section class="sourcecode">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                   <h1>TRANSPARENCY AND PRIVACY</h1>
-                        <p>Prey is an Open-Source  platform that prioritizes the clean and</p>
-                        <p>private handling of user data.</p>
-                    <a href="https://github.com/PrasannaDangol/Vehicle_tracking" target="_blank">
-                        <button class="btn_apply">SOURCE CODE</button>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
 
 {% endblock content%}
