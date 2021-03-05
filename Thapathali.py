@@ -13,7 +13,7 @@ from django.db.models.functions import datetime
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="password123",
+  password="",
   database="vtrack"
 )
 
@@ -69,7 +69,7 @@ def recognized_plate(list_char_on_plate, size):
     print("threading time: " + str(time.time() - t0))
 
     sql = "INSERT INTO map_vehicle (licensenumber, location, Time, lat, lon) VALUES (%s, %s, %s, %s, %s)"
-    val = (final_plate, "KEC", datetime.datetime.now(), "27.690491", "85.317117")
+    val = (final_plate, "Thapathali", datetime.datetime.now(), "27.690491", "85.317117")
     mycursor.execute(sql, val)
     mydb.commit()
 

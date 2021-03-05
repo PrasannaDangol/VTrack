@@ -16,6 +16,9 @@
     <title>Locate</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
 {% endblock head %}
 
 {% block content %}
@@ -31,13 +34,18 @@
                         <p class="text-secondary">Email: {{ user.email }}</p>
                         <p class="text-secondary">Phone number: {{ user.profile.phonenumber }}</p>
                         <p class="text-secondary">Your License Number: {{ user.profile.licensenumber }}</p>                       
+                        <p class="text-secondary">License number: {{ user.profile.licensenumber }}</p>
+                        {% for i in vehicle_number %}
+                        {% if user.profile.licensenumber == i.licensenumber %}
+                         <p class="text-secondary">For License number: {{ i.lon }}</p>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </section>
           </div>
           <div class="col-md-9" style="padding-top: 50px; width: auto">
               <div id='map' style='width: auto; height: 700px;'></div>
                 <script>
-
                 mapboxgl.accessToken = '{{mapbox}}';
                 var map = new mapboxgl.Map({
                 container: 'map',
@@ -46,15 +54,21 @@
                         zoom: 12,
                         attributionControl: false
                 });
+                lat = "85.3241"
                 {% for i in vehicle_number %}
                 {% if user.profile.licensenumber == i.licensenumber %}
                  var marker = new mapboxgl.Marker()
-                  .setLngLat([85.3240, 27.7172])
+                  .setLngLat([{{i.lon}}, {{i.lat}}])
                   .addTo(map);
                 {% endif %}
                 {% endfor %}
-
-                map.addControl(new mapboxgl.NavigationControl());
+<!--                map.addControl(-->
+<!--                new MapboxDirections({-->
+<!--                accessToken: mapboxgl.accessToken-->
+<!--                }),-->
+<!--                'top-left'-->
+<!--                );-->
+<!--                map.addControl(new mapboxgl.NavigationControl());-->
                 </script>
           </div>
       </div>
