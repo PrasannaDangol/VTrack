@@ -1,0 +1,157 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+
+{% block content %}
+
+    <section class="hero front-end center">
+        <div class="container-fluid">
+            <div class="container container-landing">
+                <h1 class="primary-title">AI Powered Vehicle Tracking</h1>
+                <p>AI Powered Vehicle Tracking is a revolutionary way to track lost or stolen vehicles. Making
+                    use of Artificial Intelligence, you never have to go through the hassle previously faced.</p>
+                <a href="#btn" class="btn-apply">Apply Now<img src="{% static 'home/ic-arrow.svg' %}" alt="Arrow Icon"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="requirements">
+        <div class="container">
+            <h2 class="section-title">What We Do!</h2>
+            <div class="split">
+                <article class="requirements__item">
+                    <h3>Identify Vehicle Plate</h3>
+                    <img src="{% static 'home/plate.jpg' %}" alt="license plate detection image">
+                    <p>With the use of Artificial Intelligence Technology, We track the given license number plate using Character Segmentation and Recognition</p>
+                </article>
+                <article class="requirements__item">
+                    <h3>Track Vehicle</h3>
+                    <img src="{% static 'home/locate.jpg' %}" alt="vehicle tracking image">
+                    <p>Find the closet location where the vehicle was last seen for increasing the possibility of finding the vehicle.</p>
+                </article>
+                <article class="requirements__item">
+                    <h3>Notify User</h3>
+                    <img src="{% static 'home/notify.png' %}" alt="user notification image">
+                    <p>Once the vehicle has been located, we notify the end user of the last seen destination of the vehicle.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+      <h2>How Did We Built It?</h2>
+      <p>The tools that we used to build this project</p>
+      <div class="gallery__logos">
+          <div class="container-images">
+              <img src="{% static 'home/py.png' %}" alt="Python logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Python</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/django.png' %}" alt="Django logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Django</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/mysql.png' %}" alt="MySQL logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">MySQL</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/tf.png' %}" alt="Keras and Tensorflow logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Keras & Tensorflow</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/js.png' %}" alt="JavaScript logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">JavaScript</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/html.png' %}" alt="HTML & CSS Logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">HTML & CSS</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/mapbox.jpg' %}" alt="Mapbox logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Mapbox</div>
+              </div>
+          </div>
+          <div class="container-images">
+              <img src="{% static 'home/mailgun.png' %}" alt="Mailgun logo" class="gallery__image">
+              <div class="overlay">
+              <div class="text">Mailgun</div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="our-webcoderskull padding-lg">
+    <div class="container">
+      <div class="row heading heading-icon">
+          <h2>Our Team</h2>
+      </div>
+      <ul class="row">
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/prasanna.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.linkedin.com/in/prasanna-dangol-7abaa1178/">Prasanna Dangol</a></h3>
+              <p>Backend Developer</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/shreyanshu.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.linkedin.com/in/skunwar11">Shreyanshu Kunwar</a></h3>
+              <p>AI & Frontend Developer</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+        </li>
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/xu.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.linkedin.com/in/sujan-manandhar-582059179/">Sujan Manandhar</a></h3>
+              <p>Frontend Developer</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+         </li>
+        <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight" style="height: 349px;">
+              <figure><img src="{% static 'home/shreejal.jpg' %}" class="img-responsive" alt=""></figure>
+              <h3><a href="https://www.facebook.com/shreejal04">Shreejal Gupta</a></h3>
+              <p>QA and Research</p>
+              <ul class="follow-us clearfix">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+{% endblock content%}

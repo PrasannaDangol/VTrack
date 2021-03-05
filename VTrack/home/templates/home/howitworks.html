@@ -1,0 +1,175 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>How it Works</title>
+{% endblock title %}
+
+{% block content %}
+<section class="tracking_kit">
+   <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="hiw-r-c">
+                <img src="{% static 'home/howitworks1.webp' %}"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="hiw">
+                <h1>Your Vehicle Tracking Kit</h1>
+                <p>One app, one account, and a single online hub to find and track your vehicle</p>
+                <a href="" class="btn_setup">
+                    <button type="button" class="btn btn-outline-dark">Setting Up V_Track</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="settingupv_track">
+     <div class="container" style="padding-top: 80px">
+        <div class="row">
+            <div class="col-md-9">
+                <h1>SETTING UP V_TRACK</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h3>INSTALL AND SIGNUP</h3>
+                                <p>Sign-up in the app, and use the same account when installing Prey on all your phones, laptops, and tablets</p>
+                            </div>
+                            <div class="col-sm">
+                                <h3>HOP IN THE PANEL</h3>
+                                <p>Manage all your devices at the same place, the online panel. Login at our site or inside the mobile app to track, configure, or use tools</p>
+                            </div>
+                            <div class="col-sm">
+                                <h3>PERSONALIZE IF NECESSARY</h3>
+                                <p>By default, Prey’s tracking is active and continued. You can modify this at the panel’s Settings tab. Visit Device Management to find these tracking settings: Active tracking or on-demand</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hiw-2">
+                    <img src="{% static 'home/howitworks2.webp' %}"/>
+                </div>
+            </div>
+        </div>
+     </div>
+</section>
+
+<section class="reactingtotheft">
+     <div class="container" style="padding-top: 10px">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="hiw-3">
+                    <img src="{% static 'home/howitworks3.webp' %}"/>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="react_vtrack">
+                    <h1>REACTING TO THEFT OR LOSS</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h3>MARK AS MISSING</h3>
+                                <p>Login to the panel and mark it as MISSING. Prey will track and get evidence reports to help retrieve it.</p>
+                            </div>
+                            <div class="col-sm">
+                                <h3>COUNTERATTACK</h3>
+                                <p>Use Prey’s features at the online panel to remotely lock your phone, retrieve and wipe your computer’s data, ring an alarm to locate a tablet, and more</p>
+                            </div>
+                            <div class="col-sm">
+                                <h3>RETRIEVE YOUR STUFF</h3>
+                                <p>Use Prey’s evidence reports, with remote pictures, locations, and nearby networks to coordinate a recovery with the police!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</section>
+<a href="#" class="btn_knowmore">
+    <button type="button" class="btn btn-outline-dark">Know More</button>
+</a>
+
+<section class="hiw_trusted">
+    <div class="container">
+        <h4 style="text-align: center">Trusted by millions of people and worldwide businesses alike.</h4>
+        <div class="row">
+            <div class="col-sm">
+                <h1>
+                    <span>+7,136,934</span>
+                </h1>
+                <small>Awesome Security Heroes</small>
+            </div>
+            <div class="col-sm">
+                <h1>
+                    <span>+8,852,602</span>
+                </h1>
+                <small>Cool gadgets safe and sound</small>
+            </div>
+            <div class="col-sm">
+                <h1>
+                    <span>+230</span>
+                </h1>
+                <small>Countries covered (small islands too)</small>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="whattheysayaboutus">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>WHAT THEY SAY ABOUT US</h1>
+                <a href="#" class="btn_knowmore">
+                    <button type="button" class="btn btn-outline-dark">Read More Stories</button>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h2>Tracked lost vehicle after 2 weeks</h2>
+                        <a href="#">
+                            <button class="btnreadstories" data-toggle="collapse" data-target=".navbar-collapse">Read story
+                        </button>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                      <h2>Found my bike thrown in dumpsite</h2>
+                        <a href="#">
+                            <button class="btnreadstories" data-toggle="collapse" data-target=".navbar-collapse">Read story
+                        </button>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                      <h2>Traced the robber and caught him</h2>
+                        <a href="#">
+                            <button class="btnreadstories" data-toggle="collapse" data-target=".navbar-collapse">Read story
+                        </button>
+                        </a>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+{%  load static %}
+{% block title %} <title>Logout</title>{% endblock title %}
+
+{% block content %}
+
+    <section class="logout btn-custom-logout" style="height: 308px">
+        <div class="container">
+            <h1 style="padding-top: 70px; color: #333;">You have been logged out</h1>
+                <div class="border-top pt-3">
+                    <a class="ml-2 btn btn-primary" href="{% url 'login' %}">Log In</a>
+                </div>
+            </div>
+    </section>
+
+{% endblock content%}
+

@@ -1,0 +1,301 @@
+{% load static %}
+html,body{
+
+}
+
+
+
+/*css for howitworks*/
+.hiw h1{
+    padding-top: 180px;
+}
+
+.hiw p{
+    padding-right: 10px;
+}
+
+.hiw-r-c{
+    width: 100%;
+}
+.hiw-r-c img{
+    width: 100%;
+}
+.hiw-2 img{
+    padding-top: 10px;
+    width: auto;
+    height: 500px;
+}
+.hiw-3 img{
+    padding-top: 10px;
+    width: auto;
+    height: 500px;
+}
+
+.hiw_trusted{
+    background: url("../digital earth1.jpg") no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-top: 70px;
+    color: white;
+}
+
+.col-sm{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.settingupv_track h1, .react_vtrack h1{
+    text-align: center;
+}
+
+.whattheysayaboutus{
+    padding: 40px 0;
+
+}
+
+.whattheysayaboutus h1{
+    padding-top: 90px;
+}
+
+.carousel-item{
+    text-align: center;
+    height: 250px;
+    background: url("../whattheysay.jpg");
+}
+
+.carousel-item h2{
+    color: #234457;
+    text-align: center;
+    padding-top: 115px;
+
+}
+.btnreadstories {
+    outline: none;
+    border: 0px;
+    box-sizing: none;
+    background-color: transparent;
+ }
+
+
+
+
+/**/
+
+/*nav bar*/
+.bg-nav{
+    background: #6c757d;
+}
+
+.navbar{
+background: rgba(255, 255, 255, 0.7);
+-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+}
+
+a.nav-link {
+    color: rgba(0,0,0,1) !important;
+}
+
+a.nav-link:hover {
+    color: rgba(0,0,0,0.5) !important;
+}
+
+.navbar .form-inline .btn-logout{
+    padding:8px 12px;
+    background:rgb(240,248,255);
+    line-height:15px;
+    border-radius:4px;
+    color:black;
+}
+
+.navbar .form-inline .btn-login{
+    padding:8px 12px;
+    background:rgb(240,248,255);;
+    line-height:15px;
+    border-radius:4px;
+    color:black;
+}
+
+.navbar .form-inline .btn-register{
+    margin-right:20px;
+    padding:8px 12px;
+    background:rgb(240,248,255);
+    line-height:15px;
+    border-radius:4px;
+    color:black;
+}
+/**/
+
+
+/*homepage*/
+.content{
+margin-top: 65px;
+}
+
+.singlesolution{
+padding-top: 70px;
+}
+
+.singlesolution h1{
+padding: 15px 120px;
+}
+
+.solution1{
+    height: 250px;
+    background: url("../shield.jpg");
+    text-align: center;
+}
+.solution2{
+    height: 250px;
+    background: url("../shield.jpg");
+    text-align: center;
+}
+.solution3{
+    height: 250px;
+    background: url("../shield.jpg");
+    text-align: center;
+}
+.solution4 {
+    height: 250px;
+    background: url("../shield.jpg");
+    text-align: center;
+}
+.solution5{
+    height: 250px;
+    background: url("../shield.jpg");
+    text-align: center;
+}
+
+
+
+.trusted{
+    background: url("../digital earth1.jpg") no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding-top: 70px;
+    color: white;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.sourcecode{
+    background: url("../leaf.jpg") no-repeat;
+    background-size: cover;
+    height: 440px;
+    padding-top: 100px;
+    color: white;
+}
+
+.home-l-c{
+    margin-top: 250px;
+
+}
+.home-r-c{
+
+    width: 100%;
+}
+.home-r-c img{
+    width: 100%;
+}
+
+.logo{
+    width: 120px;
+    height: auto;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+
+}
+
+.center{
+    text-align: center;
+}
+
+
+.btn_apply{
+    border:1px solid #3498db;
+    background:none;
+    padding:10px 20px;
+    font-size: 20px;
+    cursor:pointer;
+    margin:10px;
+    color: #fff;
+    transition:0.8s;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  .btn_apply:hover{
+    color: #3498db;
+  }
+  .btn_apply::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+    top:0;
+    border-radius: 0 0 50% 50% ;
+  
+  }
+  .btn_apply:hover::before{
+    height:0%;
+  }
+
+ .img_requirement img{
+    width: 250px;
+    height: auto;
+ }
+  
+  .globe img{
+      width: 250px;
+      height: auto;
+  }
+
+  .food_img img{
+    width: 250px;
+    height: auto;
+  }
+
+  .image_we_provide img{
+    width: 250px;
+    height: auto;
+
+  }
+
+  .tailored{
+      font-style: italic;
+      font-size: large;
+      font-weight: bold;
+  }
+
+  .navbar .profilepic{
+      width: 50px;
+      height: 50px;
+  }
+  .navbar .profilepic img{
+      width: 100%;
+      height: 100%;
+
+  }
+  .profile{
+  }
+
+  footer p, footer h6, footer a, footer i{
+    color: #eee;
+}
+  footer {
+    background-color: #21272c;
+}
+
