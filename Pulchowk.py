@@ -71,7 +71,7 @@ def recognized_plate(list_char_on_plate, size):
     print("threading time: " + str(time.time() - t0))
 
     sql = "INSERT INTO map_vehicle (licensenumber, location, Time, lat, lon) VALUES (%s, %s, %s, %s, %s)"
-    val = (final_plate, "KEC", datetime.datetime.now(), "27.6810902", "85.3163048")
+    val = (final_plate, "Pulchowk", datetime.datetime.now(), "27.6810902", "85.3163048")
     mycursor.execute(sql, val)
     mydb.commit()
 
