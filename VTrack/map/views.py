@@ -20,4 +20,6 @@ def map(request):
     			'a': a
     		}
 
+    # if (vehicle_location["licensenumber"])
+
     return render(request, 'map/map.html', context : context)

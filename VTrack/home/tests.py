@@ -3,7 +3,6 @@ import json
 from map.models import Vehicle
 
 vehicle_number = Vehicle.objects.all()
-print(vehicle_number)
 service = Directions(
     access_token="pk.eyJ1IjoieHVqYW4xOTY2IiwiYSI6ImNrbHFtdXZycjB3cGsyb2xoY3hqaTRsenUifQ.XE2vYY9Ccowx9lipD08Wlw")
 
