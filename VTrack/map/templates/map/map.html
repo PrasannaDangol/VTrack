@@ -62,6 +62,34 @@
                   .addTo(map);
                 {% endif %}
                 {% endfor %}
+                map.on('load', function () {
+                map.addSource('route', {
+                'type': 'geojson',
+                'data': {'type': 'Feature',
+                'geometry': {
+                    'type': 'LineString',
+                    'coordinates': {{directionCordinate}}
+                    },
+                    'properties':{
+                        'distance': 6853.188,
+                        'duration': 1188.316
+                        }
+                    }}
+                );
+                map.addLayer({
+                    'id': 'route',
+                    'type': 'line',
+                    'source': 'route',
+                    'layout': {
+                        'line-join': 'round',
+                        'line-cap': 'round'
+                    },
+                    'paint': {
+                    'line-color': '#888',
+                    'line-width': 8
+                    }
+                });
+		});
 // <!--                map.addControl(-->
 // <!--                new MapboxDirections({-->
 // <!--                accessToken: mapboxgl.accessToken-->

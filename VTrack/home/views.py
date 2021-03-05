@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from map.models import Vehicle
+from .tests import *
 
 
 # Create your views here.
@@ -18,7 +19,8 @@ def map(request):
 	# vehicle_number = vehicle_number[0].licensenumber
 	context = {
 	"mapbox" : mapbox_access_token,
-	"vehicle_number" : vehicle_number
+	"vehicle_number" : vehicle_number,
+	"directionCordinate" : directionCordinates
 	}
 	return render(request, 'map/map.html', context)
 
