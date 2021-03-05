@@ -2,15 +2,13 @@ from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from map.models import Vehicle
 from Users.models import Profile
-from .mailgun import *
-
+from .emailsender import mailgun
 from .tests import *
 
 
 # Create your views here.
 def home(request):
     return render(request, 'home/home.html')
-
 
 def howitworks(request):
     return render(request, 'home/howitworks.html')
@@ -30,7 +28,7 @@ def map(request):
 	j=0
 	for i in vehicle_number:
 		if(vehicle_number[j].licensenumber == user_location[0].licensenumber):
-			send_vehicle_found_message()
+			mailgun.send_vehicle_found_message()
 		j += 1
 	return render(request, 'map/map.html', context)
 
