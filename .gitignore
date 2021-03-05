@@ -24,5 +24,5 @@ VTrack/Users/__pycache__/signals.cpython-37.pyc
 VTrack/Users/__pycache__/urls.cpython-37.pyc
 VTrack/Users/__pycache__/views.cpython-37.pyc
 VTrack/Users/migrations/__pycache__/__init__.cpython-37.pyc
-emailsender/config.py
+VTrack/home/emailsender/config.py
 VTrack/virtual
