@@ -4,9 +4,9 @@ from map.models import Vehicle
 from Users.models import Profile
 from .emailsender import mailgun
 from .tests import *
+from .forms import *
 
-
-# Create your views here.
+# Create your views here
 def home(request):
     return render(request, 'home/home.html')
 
@@ -28,10 +28,20 @@ def map(request):
 	j=0
 	for i in vehicle_number:
 		if(vehicle_number[j].licensenumber == user_location[0].licensenumber):
-			mailgun.send_vehicle_found_message()
+			# mailgun.send_vehicle_found_message()
+			print("sads")
 		j += 1
 	return render(request, 'map/map.html', context)
 
+def post(request):
+	form = HomeForm(request.POST)
+	if form.is_valid():
+		email = form.cleaned_data['email']
+		message = form.cleaned_data['email']
+	return render(request, 'home/home.html')
+
 @login_required
 def missingreport(request):
-    return render(request, 'missingreport/missingreport.html')
+	message = "abc"
+	mailgun.missing_report_message(message)
+	return render(request, 'missingreport/missingreport.html')
