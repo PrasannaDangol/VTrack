@@ -25,11 +25,6 @@ class Vehicle(models.Model):
     def __str__(self):
         return f'{self.licensenumber}'
 
-class MissingVehicle(models.Model):
-    missingVehicle_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    profile_id = models.IntegerField(default='')
 
-    def __str__(self):
-        return f'{self.profile_id}'
 
 
