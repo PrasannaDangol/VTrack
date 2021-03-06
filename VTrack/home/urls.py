@@ -8,4 +8,5 @@ urlpatterns = [
     path('map/', views.map, name='map'),
     path('missingreport/', views.missingreport, name='missingreport'),
     path('register/', register, name='register'),
+    path('route', views.routeModal, name='route'),
 ]

@@ -2,11 +2,26 @@ from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from map.models import Vehicle
 from Users.models import Profile
+from .models import MissingVehicle
 from .emailsender import mailgun
 from .tests import route
 from .forms import *
 
 # Create your views here
+def routeModal(request):
+	user_location = Profile.objects.all()
+	print(user_location)
+	if request.method == 'POST':
+		if request.POST.get('mes'):
+			savemessage = MissingVehicle()
+			savemessage.licensenumber = user_location[0].licensenumber
+			savemessage.mes = request.POST.get('mes')
+			savemessage.email = request.POST.get('emailModal')
+			savemessage.save()
+			return render(request, 'home/home.html')
+	else:
+		return render(request, 'home/home.html')
+
 def home(request):
     return render(request, 'home/home.html')
 
