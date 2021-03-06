@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from map.models import Vehicle
 from Users.models import Profile
 from .emailsender import mailgun
-from .tests import *
+from .tests import route
 from .forms import *
 
 # Create your views here
@@ -23,22 +23,16 @@ def map(request):
 	context = {
 	"mapbox" : mapbox_access_token,
 	"vehicle_number" : vehicle_number,
-	"directionCordinate" : directionCordinates
+	"directionCordinate" : route()
 	}
 	j=0
 	for i in vehicle_number:
 		if(vehicle_number[j].licensenumber == user_location[0].licensenumber):
+			route()
 			# mailgun.send_vehicle_found_message()
 			print("sads")
 		j += 1
 	return render(request, 'map/map.html', context)
-
-def post(request):
-	form = HomeForm(request.POST)
-	if form.is_valid():
-		email = form.cleaned_data['email']
-		message = form.cleaned_data['email']
-	return render(request, 'home/home.html')
 
 @login_required
 def missingreport(request):
